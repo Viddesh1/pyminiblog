@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Blog</title>
+    <link rel="stylesheet" href="{% static 'blog_s/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'blog_s/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'blog_s/css/style.css' %}">
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        {% include "blog_t/navbar.html" %}
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                {% block msg %}{% endblock msg %}
+            </div>
+        </div>
+            <div class="row">
+                {% block side %}{% endblock side %}
+                {% block content %}{% endblock content %}
+            </div>
+    </div>
+    <script src="{% static 'blog_s/js/jquery.js' %}"></script>
+    <script src="{% static 'blog_s/js/popper.js' %}"></script>
+    <script src="{% static 'blog_s/js/fontawesome.js' %}"></script>
+    <script src="{% static 'blog_s/js/bootstrap.js' %}"></script>
+</body>
+</html>
